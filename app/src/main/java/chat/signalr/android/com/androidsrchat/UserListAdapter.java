@@ -47,6 +47,8 @@ public class UserListAdapter extends ArrayAdapter<User> {
         ImageView imageView = (ImageView)row.findViewById(R.id.iv_icon);
         int image = user.getImage();
         imageView.setImageResource(image);
+        /*Bitmap icon = BitmapFactory.decodeResource(getContext().getResources(), image);
+        imageView.setImageBitmap(icon);*/
         //linearMain.addView(imageView);
         //color
         //TextView countV = new TextView(context);

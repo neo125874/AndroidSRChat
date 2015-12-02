@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/lineraMain"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:padding="10dp" >
+    android:padding="10dp">
 
 
     <RelativeLayout
@@ -15,17 +16,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_name"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dip"
-            android:layout_marginTop="30dip"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/iv_icon"
-            android:layout_toRightOf="@+id/tv_name"
+            android:text="name"
             android:layout_marginLeft="10dip"
-            android:layout_marginTop="30dip"/>
+            android:layout_toRightOf="@+id/iv_icon"
+            android:layout_marginTop="30dip"
+            android:layout_centerVertical="true"/>
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:id="@+id/iv_icon"
+            android:src="@drawable/fantasy_1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="30dip"
+
+            app:siBorderWidth="1dp"
+            app:siBorderAlpha="0.5"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,6 +44,7 @@
             android:layout_marginTop="30dip"
             android:text="1"
             android:padding="5dip"
-            android:background="@drawable/bg_red"/>
+            android:background="@drawable/bg_red"
+            android:layout_centerVertical="true"/>
     </RelativeLayout>
 </LinearLayout>

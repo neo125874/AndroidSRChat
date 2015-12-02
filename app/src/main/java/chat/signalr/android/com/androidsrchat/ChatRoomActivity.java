@@ -163,7 +163,7 @@ public class ChatRoomActivity extends AppCompatActivity {
                             ChatFragment fragment = (ChatFragment)getSupportFragmentManager().findFragmentByTag("chatFrag");
                             if (fragment != null)
                                 fragment.displayMessage(chatMessage);
-                        }else if(TextUtils.isEmpty(chatting)){
+                        }else/* if(TextUtils.isEmpty(chatting))*/{
                             for(int j = userArray.size()-1; j >= 0; j--){
                                 if(userArray.get(j).getName().equals(chatMessage.getWithName())){
                                     int cnt = userArray.get(j).getMsgCnt();
