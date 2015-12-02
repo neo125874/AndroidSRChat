@@ -6,4 +6,36 @@
     android:orientation="vertical"
     android:padding="10dp" >
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="30dip"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_icon"
+            android:layout_toRightOf="@+id/tv_name"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="30dip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_count"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="30dip"
+            android:text="1"
+            android:padding="5dip"
+            android:background="@drawable/bg_red"/>
+    </RelativeLayout>
 </LinearLayout>

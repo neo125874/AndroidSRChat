@@ -33,21 +33,38 @@ public class UserListAdapter extends ArrayAdapter<User> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
 
-        if (row == null) {
-            LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            row = inflater.inflate(layoutResourceId, parent, false);
+        LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+        row = inflater.inflate(layoutResourceId, parent, false);
 
-            linearMain = (LinearLayout) row.findViewById(R.id.lineraMain);
+        linearMain = (LinearLayout) row.findViewById(R.id.lineraMain);
 
-            User user = data.get(position);
-            TextView textView = new TextView(context);
-            textView.setText(user.getName());
-            linearMain.addView(textView);
-            ImageView imageView = new ImageView(context);
-            int image = user.getImage();
-            imageView.setImageResource(image);
-            linearMain.addView(imageView);
+        User user = data.get(position);
+        //TextView textView = new TextView(context);
+        TextView textView = (TextView)row.findViewById(R.id.tv_name);
+        textView.setText(user.getName());
+        //linearMain.addView(textView);
+        //ImageView imageView = new ImageView(context);
+        ImageView imageView = (ImageView)row.findViewById(R.id.iv_icon);
+        int image = user.getImage();
+        imageView.setImageResource(image);
+        //linearMain.addView(imageView);
+        //color
+        //TextView countV = new TextView(context);
+        TextView countView = (TextView)row.findViewById(R.id.tv_count);
+        int num = user.getMsgCnt();
+        if(num == 0){
+            countView.setVisibility(View.GONE);
+        }else {
+            countView.setText(num + "");
+            countView.setBackgroundResource(R.drawable.bg_red);
+            countView.setVisibility(View.VISIBLE);
         }
+        /*if(num > 0) {
+            countV.setBackgroundResource(R.drawable.tags_rounded_corners);
+            GradientDrawable gradientDrawable = (GradientDrawable) countV.getBackground();
+            gradientDrawable.setColor(Color.parseColor("#FEA31E"));
+            linearMain.addView(countV);
+        }*/
 
         return row;
     }

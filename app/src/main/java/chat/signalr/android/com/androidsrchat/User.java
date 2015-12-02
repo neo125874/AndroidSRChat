@@ -3,11 +3,21 @@ package chat.signalr.android.com.androidsrchat;
 public class User{
     int image;
     String name;
+    int msgCnt;
 
-    public User(int image, String name){
+    public User(int image, String name, int msgCnt){
         super();
         this.image = image;
         this.name = name;
+        this.msgCnt = msgCnt;
+    }
+
+    public int getMsgCnt() {
+        return msgCnt;
+    }
+
+    public void setMsgCnt(int msgCnt) {
+        this.msgCnt = msgCnt;
     }
 
     public int getImage() {
