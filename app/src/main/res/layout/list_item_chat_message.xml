@@ -6,15 +6,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginLeft="10dip">
 
-        <TextView
-            android:id="@+id/txtInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="30sp"
-            android:layout_gravity="right"
-            android:textSize="12sp"
-            android:textColor="@android:color/darker_gray" />
+
 
         <LinearLayout
             android:id="@+id/contentWithBackground"
@@ -34,6 +31,15 @@
                 android:maxWidth="240dp" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_gravity="right"
+            android:textSize="12sp"
+            android:text="test"
+            android:textColor="@android:color/darker_gray" />
 
     </LinearLayout>
 </RelativeLayout>
